@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo Promesas</title>
+  </head>
+  <body>
+    <div id='contenedorImagen'></div>
+	
+    <script>
+      var url = "http://dummyimage.com/"
+
+      cargarImagen(url+"32x32")
+      .then(function(){cargarImagen(url + "33x33")})
+      .then(function(){cargarImagen(url+"34x34")});
+
+      otraInstruccion(url + "50x50");
+
+      function cargarImagen(url){
+        return new Promise(function(resolve,reject){
+          var contenedorImagen = document.getElementById("contenedorImagen");
+          var nuevaImagen = document.createElement("img");
+          nuevaImagen.src = url;
+          contenedorImagen.appendChild(nuevaImagen);
+          resolve("Imagen cargada")
+        });
+      }
+
+      function otraInstruccion(url){
+        var contenedorImagen = document.getElementById("contenedorImagen");
+        var nuevaImagen = document.createElement("img");
+        nuevaImagen.src = url;
+        contenedorImagen.appendChild(nuevaImagen);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Preguntar a Mamá</title>
+	</head>
+	<body>
+		<script>
+			function preguntarMama() {
+				return new Promise(function (resolve, reject) {
+					if (mamaYes) {
+						var celular = {
+							modelo: "Nokia",
+							color: "black"
+						};
+						resolve(celular);
+					}
+					else{
+						reject("NO :/");
+					}
+				});
+			}
+
+			var mamaYes = false;
+			preguntarMama()
+			.then(function (celular) {
+				console.log(celular);
+			})//<- resolve
+			.catch(function (error) {
+				console.log("La razón del error es: " + error);
+			});//<- reject
+		</script>
+	</body>
+</html>

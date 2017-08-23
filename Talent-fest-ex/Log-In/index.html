@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<!--Import Google Icon Font-->
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	  <!--Import materialize.css-->
+	  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	  <link rel="stylesheet" href="css/style.css">
+	  <!--Let browser know website is optimized for mobile-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <meta charset="utf-8">
+	  <title>LogIn Facebook</title>
+	</head>
+	<body class="grey lighten-2">
+		<section id="log" class="container mt-5 white">
+			<section class="row mt-5">
+				<div class="col m6">
+					<div class="container">
+						<button id="fb" class="btn row" type="submit" name="action">Login with Facebook
+						    <i class="material-icons left">send</i>
+						  </button>
+					</div>
+					<div class="container">
+						<button id="tw" class="btn row" type="submit" name="action">Login with Twitter
+						    <i class="material-icons left">send</i>
+						  </button>
+					</div>
+					<div class="container">
+						<button id="goo" class="btn row" type="submit" name="action">Login with google+
+						    <i class="material-icons left">send</i>
+						  </button>
+					</div>
+				</div>
+				<div class="col m6">
+					<div class="container">
+						<p class=" row center"> <strong> Sign in manually </strong></p>
+						<form class="row" action="" method="post">
+							<div class="input-field row">
+					          <input id="icon_prefix" type="text" class="validate">
+					          <label for="icon_prefix">Username o email</label>
+					        </div>
+							<div class="input-field row">
+					          <input id="icon_prefix" type="text" class="validate">
+					          <label for="icon_prefix">Password</label>
+					        </div>
+							<div class="row">
+								<div class="col m6">
+									<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      								<label for="filled-in-box">Remember me</label>
+								</div>
+								<div class="col m6">
+									<button id="log" class="btn" type="submit" name="action">Login</button>
+								</div>
+
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</section>
+		</section>
+		<!-- Lista Usuarios -->
+		<section class="container black">
+			<h4 class="center white-text">  U S U A R I O S </h4>
+			<ul id="lista-Usuarios" class=" white-text container">
+				<!-- <li> Hola</li> -->
+			</ul>
+
+		</section>
+		<!-- SCRIPTS  -->
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
